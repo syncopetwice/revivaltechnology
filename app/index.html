@@ -2,11 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>Contact Us</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <link rel="stylesheet" href="assets/styles/app.styles.css" />
+  
+  <link rel="stylesheet" href="node_modules/owl.carousel/dist/assets/owl.theme.default.min.css">
+  <link rel="stylesheet" href="/node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
+  
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="/node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.owl-carousel').owlCarousel({
+        items: 1,
+        loop: true,
+        nav: true,
+        dots: true,
+        navText: ['<i class="ion-arrow-left-b"></i>', '<i class="ion-arrow-right-b"></i>']
+      });
+    });
+  </script>
+
 </head>
 <body>
   <!-- Application -->
@@ -30,87 +48,63 @@
       </header>
       <!-- End :: Header -->
       
-      <!-- Page -->
-      <div class="page--contact-us">
-        <!-- Jumbotron -->
-        <section class="section--jumbotron">
-          <div class="section--inner">
-            <h1 class="heading">Get In Touch</h1>
-            <p class="description">This is Photoshop's version</p>
-            <p class="description">Proin gravida nibh viel velit auctor aliquet.</p>
-          </div>
-        </section>
-        <!-- End :: Jumbotron -->
-
-        <!-- Contact Us -->
-        <section class="section--contact-us">
-          <div class="container--contact-us section--inner">
-            <!-- Send a message -->
-            <div class="send-a-message">
-              <div class="heading">Send us a Message</div>
-              
-              <form action="" class="form">
-                <div class="form-row">
-                  <div class="form-field">
-                    <label for="" class="label">Your Name</label>
-                    <input type="text" class="input">
-                  </div>
-                  <div class="form-field">
-                    <label for="" class="label">Email Address</label>
-                    <input type="email" class="input">
-                  </div>
+      <main class="main">
+        <!-- Page -->
+        <div class="page--home">
+          <!-- Slider -->
+          <section class="section--slider">
+            <div class="owl-carousel owl-theme">
+              <div class="owl-carousel-item">
+                <div class="item-content">
+                  <h2>Heading example</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam at hic, tempore doloremque placeat aperiam nulla accusantium omnis tempora. Omnis porro, impedit expedita facilis cupiditate, suscipit maxime architecto optio iure.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi odio totam tenetur magni, laborum eveniet illo unde dolore quod reprehenderit.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid possimus eos, perspiciatis officiis unde a? Repudiandae maiores consequatur facere cum, ad incidunt velit at nesciunt! Quasi dignissimos, totam voluptate, deserunt facilis nihil maxime repudiandae ducimus nulla, nostrum possimus. Magnam, quae.</p>
+                  <a href="#" class="read-more">Read more<i class="ion-arrow-right-b"></i></a>
                 </div>
-
-                <div class="form-row">
-                  <div class="form-field">
-                    <label for="" class="label">Phone</label>
-                    <input type="tel" class="input">
-                  </div>
-                  <div class="form-field">
-                    <label for="" class="label">Company</label>
-                    <input type="text" class="input">
-                  </div>
+              </div>
+              <div class="owl-carousel-item second">
+                <div class="item-content">
+                  <h2>Heading example</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam at hic, tempore doloremque placeat aperiam nulla accusantium omnis tempora. Omnis porro, impedit expedita facilis cupiditate, suscipit maxime architecto optio iure.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi odio totam tenetur magni, laborum eveniet illo unde dolore quod reprehenderit.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid possimus eos, perspiciatis officiis unde a? Repudiandae maiores consequatur facere cum, ad incidunt velit at nesciunt! Quasi dignissimos, totam voluptate, deserunt facilis nihil maxime repudiandae ducimus nulla, nostrum possimus. Magnam, quae.</p>
+                  <a href="#" class="read-more">Read more<i class="ion-arrow-right-b"></i></a>
                 </div>
-
-                <div class="form-row">
-                  <div class="form-field form-field--textarea">
-                    <label for="" class="label">Message</label>
-                    <textarea name="" id="" class="textarea"></textarea>
-                  </div>
-                  <button type="submit" class="submit">
-                    <i class="ion-paper-airplane icon-submit"></i>
-                  </button>
+              </div>
+              <div class="owl-carousel-item third">
+                <div class="item-content">
+                  <h2>Heading example</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam at hic, tempore doloremque placeat aperiam nulla accusantium omnis tempora. Omnis porro, impedit expedita facilis cupiditate, suscipit maxime architecto optio iure.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi odio totam tenetur magni, laborum eveniet illo unde dolore quod reprehenderit.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid possimus eos, perspiciatis officiis unde a? Repudiandae maiores consequatur facere cum, ad incidunt velit at nesciunt! Quasi dignissimos, totam voluptate, deserunt facilis nihil maxime repudiandae ducimus nulla, nostrum possimus. Magnam, quae.</p>
+                  <a href="#" class="read-more">Read more<i class="ion-arrow-right-b"></i></a>
                 </div>
-
-
-
-              </form>
-            </div>
-            <!-- End :: Send a message -->
-            <!-- Contact Information -->
-            <div class="contact-information">
-              <div class="heading">Contact Information</div>
-              <div class="rows">
-                <div class="row">
-                  
-                  <span>360 King Street, Feasterville Trevose, PA 19053</span>
-                </div>
-                <div class="row">
-                  
-                  <span>(800) 900-200-300</span>
-                </div>
-                <div class="row">
-                  
-                  <span>useraccount@mail.com</span>
-                  </div>
               </div>
             </div>
-            <!-- End :: Contact Information -->
-          </div>    
-        </section>
-        <!-- End :: Contact Us -->
-      </div>
-      <!-- End :: Page -->
+          </section>
+          <!-- End :: Slider -->
+
+          <!-- About Us -->
+          <section class="section--about-us">
+            <div class="description">
+              <div class="description--inner">
+                <h2>About Us</h2>
+                <p>
+                  Finance Plus is one of the world’s leading financial consulting firms. We work with clients to help them have a thorough look about their financial situations, make better decisions, get those decisions translated quickly into actions and sustain the momentum into the future.
+                </p>
+                <a href="#" class="read-more">Read more<i class="ion-arrow-right-b"></i></a>
+              </div>
+            </div>
+            <div class="presentation">
+              
+            </div>
+          </section>
+          <!-- End :: About Us -->
+
+        </div>
+        <!-- End :: Page -->
+      </main>
 
       <!-- Footer -->
       <footer class="footer">
@@ -132,22 +126,42 @@
             </div>
 
             <div class="column">
-              <nav class="nav-menu">
-                <ul class="nav-menu-list">
-                  <li class="nav-menu-item">
-                    <a href="#" class="nav-menu-link">Products</a>
-                  </li>
-                  <li class="nav-menu-item">
-                    <a href="#" class="nav-menu-link">About</a>
-                  </li>
-                  <li class="nav-menu-item">
-                    <a href="#" class="nav-menu-link">Blog</a>
-                  </li>
-                  <li class="nav-menu-item">
-                    <a href="#" class="nav-menu-link">Contact</a>
-                  </li>
-                </ul>
-              </nav>
+              <div class="nav-menus">
+                <nav class="nav-menu">
+                  <div class="nav-menu-heading">Our Company</div>
+                  <ul class="nav-menu-list">
+                    <li class="nav-menu-item">
+                      <a href="#" class="nav-menu-link">Home</a>
+                    </li>
+                    <li class="nav-menu-item">
+                      <a href="#" class="nav-menu-link">About</a>
+                    </li>
+                    <li class="nav-menu-item">
+                      <a href="#" class="nav-menu-link">Contact</a>
+                    </li>
+                  </ul>
+                </nav>
+                <nav class="nav-menu">
+                  <div class="nav-menu-heading">Services</div>
+                  <ul class="nav-menu-list">
+                    <li class="nav-menu-item">
+                      <a href="#" class="nav-menu-link">IT Consulting</a>
+                    </li>
+                    <li class="nav-menu-item">
+                      <a href="#" class="nav-menu-link">Managed Services</a>
+                    </li>
+                    <li class="nav-menu-item">
+                      <a href="#" class="nav-menu-link">Managed Deployment</a>
+                    </li>
+                    <li class="nav-menu-item">
+                      <a href="#" class="nav-menu-link">Telecom</a>
+                    </li>
+                    <li class="nav-menu-item">
+                      <a href="#" class="nav-menu-link">Hosting & Cloud</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
             </div>
 
             <div class="column">

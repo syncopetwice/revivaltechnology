@@ -1,36 +1,66 @@
-.app { font-family: 'Open Sans', sans-serif; }
+.app { font-family: 'Open Sans', sans-serif; min-height: 100vh; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; }
 .app a { text-decoration: none; }
 .app a:focus { text-decoration: none; }
 .app ul li { margin-left: 0; }
-.app .section--inner { width: 63.33333%; margin-left: auto; margin-right: auto; }
-.app .header { background: #58ade6; }
-.app .header .container--header { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; padding-top: 20px; }
+.app .section--inner { width: 1200px; margin-left: auto; margin-right: auto; }
+.app .header { background: #fff; }
+.app .header .container--header { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; padding-top: 20px; padding-bottom: 10px; }
 .app .header .logotype { max-width: 200px; }
 .app .header .logotype-image { max-width: 100%; display: block; height: auto; }
 .app .header .nav-menu-list { list-style-type: none; margin: 0; padding: 0; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; }
 .app .header .nav-menu-item { margin-right: 60px; }
 .app .header .nav-menu-item:last-child { margin-right: 0; }
-.app .header .nav-menu-link { font-weight: 600; text-transform: uppercase; color: #fff; font-size: 14px; }
+.app .header .nav-menu-link { font-weight: 600; text-transform: uppercase; color: #333; font-size: 14px; }
+.app .main { -webkit-box-flex: 1; -webkit-flex: 1; -ms-flex: 1; flex: 1; }
 .app .footer { padding: 60px 0; }
 .app .footer .columns { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-justify-content: space-around; -ms-flex-pack: distribute; justify-content: space-around; }
-.app .footer .columns .column { width: 30%; }
+.app .footer .columns .column { width: 28%; }
+.app .footer .divider { margin-left: 10px; margin-right: 10px; font-weight: bold; }
 .app .footer .logotype { max-width: 200px; margin-bottom: 25px; }
 .app .footer .logotype .logotype-image { max-width: 100%; display: block; height: auto; }
-.app .footer .description p { font-weight: 300; color: #9a9b9d; font-size: 14px; line-height: 24px; margin-top: 0; margin-bottom: 25px; }
+.app .footer .description p { color: #9a9b9d; font-size: 14px; line-height: 24px; margin-top: 0; margin-bottom: 25px; }
 .app .footer .description p:last-child { margin-bottom: 0; }
-.app .footer .description p .divider { margin-left: 10px; margin-right: 10px; font-weight: bold; }
 .app .footer .contacts { padding-top: 20px; }
 .app .footer .contacts p { margin-top: 0; color: #9a9b9d; font-size: 14px; line-height: 24px; margin-bottom: 15px; }
 .app .footer .contacts p:last-child { margin-bottom: 0; }
 .app .footer .contacts a { color: #75acd3; }
-.app .footer .nav-menu { padding-top: 20px; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; }
-.app .footer .nav-menu .nav-menu-list { list-style-type: none; margin: 0; padding: 0; }
-.app .footer .nav-menu .nav-menu-item { margin: 0; margin-bottom: 25px; }
-.app .footer .nav-menu .nav-menu-item:last-child { margin-bottom: 0; }
-.app .footer .nav-menu .nav-menu-link { text-transform: uppercase; color: #989da3; font-size: 13px; font-weight: 600; }
-.app .page--contact-us .section--jumbotron { background-color: #58ade6; background-image: url("http://bdi.colegsirgar.ac.uk/images/uk_map.png"); background-repeat: no-repeat; background-position: 80% center; min-height: 500px; padding-top: 150px; padding-bottom: 90px; }
-.app .page--contact-us .section--jumbotron .heading { font-size: 60px; font-weight: 700; color: #fff; margin-bottom: 40px; margin-top: 0; }
-.app .page--contact-us .section--jumbotron .description { margin-top: 0; font-size: 16px; color: #28496a; margin-bottom: 17px; }
+.app .footer .nav-menus { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; }
+.app .footer .nav-menus .nav-menu { width: 50%; padding-top: 20px; }
+.app .footer .nav-menus .nav-menu .nav-menu-heading { font-weight: 600; color: #333; margin-bottom: 20px; }
+.app .footer .nav-menus .nav-menu .nav-menu-list { list-style-type: none; margin: 0; padding: 0; }
+.app .footer .nav-menus .nav-menu .nav-menu-item { margin: 0; margin-bottom: 15px; }
+.app .footer .nav-menus .nav-menu .nav-menu-item:last-child { margin-bottom: 0; }
+.app .footer .nav-menus .nav-menu .nav-menu-link { color: #989da3; font-size: 13px; }
+.app .page--home .section--slider { max-height: 600px; overflow: hidden; }
+.app .page--home .section--slider .owl-carousel .owl-carousel-item { height: 600px; background: #06C89D; }
+.app .page--home .section--slider .owl-carousel .owl-carousel-item.second { background: #7564E2; }
+.app .page--home .section--slider .owl-carousel .owl-carousel-item.third { background: #5D94DF; }
+.app .page--home .section--slider .owl-carousel .owl-carousel-item .item-content { max-width: 1000px; margin-left: auto; margin-right: auto; color: #fff; padding: 100px 120px; }
+.app .page--home .section--slider .owl-carousel .owl-carousel-item .item-content h2 { margin-top: 0; margin-bottom: 30px; font-size: 32px; font-weight: 600; }
+.app .page--home .section--slider .owl-carousel .owl-carousel-item .item-content p { margin-top: 0; font-size: 16px; margin-bottom: 30px; font-weight: 300; line-height: 30px; }
+.app .page--home .section--slider .owl-carousel .owl-carousel-item .item-content .read-more { display: inline-block; padding: 20px 30px; background: #fff; -webkit-border-radius: 4px; border-radius: 4px; color: #103f61; font-weight: 600; font-size: 14px; -webkit-transition: -webkit-box-shadow 0.2s ease; transition: -webkit-box-shadow 0.2s ease; transition: box-shadow 0.2s ease; transition: box-shadow 0.2s ease, -webkit-box-shadow 0.2s ease; }
+.app .page--home .section--slider .owl-carousel .owl-carousel-item .item-content .read-more:hover { -webkit-box-shadow: 0px 0px 38px -8px rgba(0, 0, 0, 0.75); box-shadow: 0px 0px 38px -8px rgba(0, 0, 0, 0.75); }
+.app .page--home .section--slider .owl-carousel .owl-carousel-item .item-content .read-more .ion-arrow-right-b { margin-left: 10px; }
+.app .page--home .section--slider .owl-carousel .owl-nav .owl-prev, .app .page--home .section--slider .owl-carousel .owl-nav .owl-next { position: absolute; top: 45%; -webkit-transition: -webkit-box-shadow 0.2s ease; transition: -webkit-box-shadow 0.2s ease; transition: box-shadow 0.2s ease; transition: box-shadow 0.2s ease, -webkit-box-shadow 0.2s ease; padding: 20px; background: #fff; -webkit-border-radius: 4px; border-radius: 4px; color: #333; font-size: 16px; }
+.app .page--home .section--slider .owl-carousel .owl-nav .owl-prev:hover, .app .page--home .section--slider .owl-carousel .owl-nav .owl-next:hover { -webkit-box-shadow: 0px 0px 38px -8px rgba(0, 0, 0, 0.75); box-shadow: 0px 0px 38px -8px rgba(0, 0, 0, 0.75); }
+.app .page--home .section--slider .owl-carousel .owl-nav .owl-prev { left: 20px; }
+.app .page--home .section--slider .owl-carousel .owl-nav .owl-next { right: 20px; }
+.app .page--home .section--slider .owl-carousel .owl-dots { position: absolute; bottom: 15px; left: 0; right: 0; text-align: center; }
+.app .page--home .section--slider .owl-carousel .owl-dots .owl-dot span { background: none; border: 2px solid #fff; width: 15px; height: 15px; }
+.app .page--home .section--slider .owl-carousel .owl-dots .owl-dot.active span, .app .page--home .section--slider .owl-carousel .owl-dots .owl-dot:hover span { background: #fff; }
+.app .page--home .section--about-us { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; }
+.app .page--home .section--about-us .description { width: 50%; padding: 120px 50px; background: #3a7bd5; color: #fff; }
+.app .page--home .section--about-us .description .description--inner { max-width: 600px; margin-left: auto; margin-right: auto; }
+.app .page--home .section--about-us .description h2 { margin-top: 0; margin-bottom: 30px; font-size: 32px; font-weight: 600; }
+.app .page--home .section--about-us .description p { margin-top: 0; margin-bottom: 40px; font-size: 16px; font-weight: 300; line-height: 30px; }
+.app .page--home .section--about-us .description .read-more { display: inline-block; padding: 20px 30px; background: #fff; -webkit-border-radius: 4px; border-radius: 4px; color: #103f61; font-weight: 600; font-size: 14px; -webkit-transition: -webkit-box-shadow 0.2s ease; transition: -webkit-box-shadow 0.2s ease; transition: box-shadow 0.2s ease; transition: box-shadow 0.2s ease, -webkit-box-shadow 0.2s ease; }
+.app .page--home .section--about-us .description .read-more:hover { -webkit-box-shadow: 0px 0px 38px -8px rgba(0, 0, 0, 0.75); box-shadow: 0px 0px 38px -8px rgba(0, 0, 0, 0.75); }
+.app .page--home .section--about-us .description .read-more .ion-arrow-right-b { margin-left: 10px; }
+.app .page--home .section--about-us .presentation { width: 50%; background-image: url("http://www.bosleyniagara.com/wp-content/uploads/2015/02/1344312854-711-office.jpg"); background-repeat: no-repeat; background-size: cover; position: relative; }
+.app .page--home .section--about-us .presentation:after { content: ''; width: 100%; height: 100%; position: absolute; top: 0; left: 0; background: rgba(88, 173, 230, 0.3); }
+.app .page--contact-us .section--jumbotron { background-color: #58ade6; background-image: url("http://bdi.colegsirgar.ac.uk/images/uk_map.png"); background-repeat: no-repeat; background-position: 80% center; min-height: 500px; padding-top: 100px; padding-bottom: 70px; }
+.app .page--contact-us .section--jumbotron .heading { font-size: 50px; font-weight: 700; color: #fff; margin-bottom: 40px; margin-top: 0; }
+.app .page--contact-us .section--jumbotron .description { margin-top: 0; font-size: 14px; color: #28496a; margin-bottom: 17px; }
 .app .page--contact-us .section--contact-us { position: relative; min-height: 325px; border-bottom: 1px solid #f5f5f5; }
 .app .page--contact-us .section--contact-us .container--contact-us { min-height: 400px; -webkit-box-shadow: 0px 0px 38px -8px rgba(0, 0, 0, 0.75); box-shadow: 0px 0px 38px -8px rgba(0, 0, 0, 0.75); display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; position: absolute; top: -280px; left: 0; right: 0; }
 .app .page--contact-us .section--contact-us .container--contact-us .send-a-message { width: 65.78947%; background: #fff; padding: 60px 40px 70px 65px; }

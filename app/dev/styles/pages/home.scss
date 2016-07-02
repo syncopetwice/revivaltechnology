@@ -1,0 +1,174 @@
+.page--home {
+  
+  .section--slider {
+    max-height: 600px;
+    overflow: hidden;
+    .owl-carousel {
+      .owl-carousel-item {
+        height: 600px;
+        background: #06C89D;
+        
+        &.second {
+          background: #7564E2;
+        }
+        &.third {
+          background: #5D94DF;
+        }
+        
+        .item-content {
+          max-width: 1000px;
+          margin-left: auto;
+          margin-right: auto;
+          color: #fff;
+          padding: 100px 120px;
+
+          
+
+          h2 {
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-size: 32px;
+            font-weight: 600;
+          }
+          p {
+            margin-top: 0;
+            font-size: 16px;
+            margin-bottom: 30px;
+            font-weight: 300;
+            line-height: 30px;
+          }
+          .read-more {
+            display: inline-block;
+            padding: 20px 30px;
+            background: #fff;
+            border-radius: 4px;
+            color: #103f61;
+            font-weight: 600;
+            font-size: 14px;
+            transition: box-shadow 0.2s ease;
+            &:hover {
+              box-shadow: 0px 0px 38px -8px rgba(0,0,0,0.75);
+            }
+            .ion-arrow-right-b {
+              margin-left: 10px;
+            }
+          }
+
+
+        }
+
+      }
+
+      //
+      // Settings
+
+      .owl-nav {
+        .owl-prev,
+        .owl-next {
+          position: absolute;
+          top: 45%;
+          transition: box-shadow 0.2s ease;
+          padding: 20px;
+          background: #fff;
+          border-radius: 4px;
+          color: #333;
+          font-size: 16px;
+          &:hover {
+            box-shadow: 0px 0px 38px -8px rgba(0,0,0,0.75);
+          }
+        }
+        .owl-prev {
+          left: 20px;
+        }
+        .owl-next {
+          right: 20px;
+        }
+      }
+
+      .owl-dots {
+        position: absolute;
+        bottom: 15px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        
+        .owl-dot span {
+          background: none;
+          border: 2px solid #fff;
+          width: 15px;
+          height: 15px;
+        }
+        .owl-dot.active span,
+        .owl-dot:hover span {
+          background: #fff;
+        }
+      }
+
+    }
+  }
+
+  .section--about-us {
+    display: flex;
+    justify-content: space-between;
+    
+    .description {
+      width: 50%;
+      padding: 120px 50px;
+      background: #3a7bd5;
+      color: #fff;
+      .description--inner {
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      h2 {
+        margin-top: 0;
+        margin-bottom: 30px;
+        font-size: 32px;
+        font-weight: 600;
+      }
+      p {
+        margin-top: 0;
+        margin-bottom: 40px;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 30px;
+      }
+      .read-more {
+        display: inline-block;
+        padding: 20px 30px;
+        background: #fff;
+        border-radius: 4px;
+        color: #103f61;
+        font-weight: 600;
+        font-size: 14px;
+        transition: box-shadow 0.2s ease;
+        &:hover {
+          box-shadow: 0px 0px 38px -8px rgba(0,0,0,0.75);
+        }
+        .ion-arrow-right-b {
+          margin-left: 10px;
+        }
+      }
+    }
+
+    .presentation {
+      width: 50%;
+      background-image: url('http://www.bosleyniagara.com/wp-content/uploads/2015/02/1344312854-711-office.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      &:after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(#58ade6, 0.3);
+      }
+    }
+
+  }
+
+}

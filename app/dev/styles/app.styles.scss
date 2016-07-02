@@ -1,5 +1,9 @@
 .app {
   font-family: 'Open Sans', sans-serif;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   
   a {
     text-decoration: none;
@@ -15,7 +19,7 @@
   }
 
   .section--inner {
-    width: percentage(1140/1800);
+    width: 1200px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -23,10 +27,14 @@
    //
   // Modules
   @import 'modules/header.scss';
+  .main {
+    flex: 1;
+  }
   @import 'modules/footer.scss';
 
    //
   // Pages
+  @import 'pages/home.scss';
   @import 'pages/contact.scss';
 
 }
