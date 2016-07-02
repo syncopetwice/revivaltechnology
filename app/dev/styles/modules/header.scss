@@ -1,0 +1,36 @@
+.header {
+  background: #58ade6;
+  .container--header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+  }
+  .logotype {
+    max-width: 200px;
+  }
+  .logotype-image {
+    max-width: 100%;
+    display: block;
+    height: auto;
+  }
+  .nav-menu-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav-menu-item {
+    margin-right: 60px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  .nav-menu-link {
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 14px;
+  }
+}

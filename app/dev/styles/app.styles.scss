@@ -1,0 +1,32 @@
+.app {
+  font-family: 'Open Sans', sans-serif;
+  
+  a {
+    text-decoration: none;
+    &:focus {
+      text-decoration: none;
+    }
+  }
+
+  ul {
+    li {
+      margin-left: 0;
+    }
+  }
+
+  .section--inner {
+    width: percentage(1140/1800);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+   //
+  // Modules
+  @import 'modules/header.scss';
+  @import 'modules/footer.scss';
+
+   //
+  // Pages
+  @import 'pages/contact.scss';
+
+}

@@ -1,0 +1,153 @@
+.page--contact-us {
+  
+  .section--jumbotron {
+    background-color: #58ade6;
+    background-image: url('http://bdi.colegsirgar.ac.uk/images/uk_map.png');
+    background-repeat: no-repeat;
+    background-position: 80% center;
+    min-height: 500px;
+    padding-top: 150px;
+    padding-bottom: 90px;
+    .heading {
+      font-size: 60px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 40px;
+      margin-top: 0;
+    }
+    .description {
+      margin-top: 0;
+      font-size: 16px;
+      color: #28496a;
+      margin-bottom: 17px;
+    }
+  }
+
+  .section--contact-us {
+    position: relative;
+    min-height: 325px;
+    border-bottom: 1px solid #f5f5f5;
+    .container--contact-us {
+      min-height: 400px;
+      box-shadow: 0px 0px 38px -8px rgba(0,0,0,0.75);
+      display: flex;
+      position: absolute;
+      top: -280px;
+      left: 0;
+      right: 0;
+      .send-a-message {
+        width: percentage(750/1140);
+        background: #fff;
+        padding: 60px 40px 70px 65px;
+        .heading {
+          color: #203351;
+          font-size: 20px;
+          margin-bottom: 60px;
+        }
+
+        .form {
+          
+          .input,
+          .label,
+          .textarea {
+            display: block;
+            width: 100%;
+          }
+
+          .input,
+          .textarea,
+          .submit {
+            &:focus {
+              outline: none;
+            }
+          }
+
+          .input,
+          .textarea {
+            font-weight: 600;
+            padding: 10px 0 15px 0;
+          }
+
+          .label {
+            color: #b8b9bb;
+            margin-bottom: 5px;
+            font-size: 13px;
+          }
+
+          .input {
+            border: 0;
+            border-bottom: 1px solid #f0f0f0;
+            color: #383f45;
+            font-size: 16px;
+          }
+
+          .textarea {
+            border: 0;
+            border-bottom: 1px solid #f0f0f0;
+            min-height: 6 0px;
+            resize: none;
+          }
+
+          .submit {
+            position: absolute;
+            bottom: -35px;
+            right: 0;
+            width: 70px;
+            height: 70px;
+            background: #48a5f2;
+            border: 0;
+            border-radius: 100px;
+            box-shadow: 0px 0px 30px -7px rgba(66,167,239,1);
+            cursor: pointer;
+            .icon-submit {
+              color: #fff;
+              font-size: 30px;
+            }
+          }
+
+          .form-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            position: relative;
+            &:last-child {
+              margin-bottom: 0;
+            }
+            .form-field {
+              width: 48%;
+              &.form-field--textarea {
+                width: 100%;
+                padding-right: 70px;
+              }
+
+            }
+          }
+        }
+
+      }
+      .contact-information {
+        width: percentage(390/1140);
+        background: #103f6d;
+        padding: 60px 40px 70px 65px;
+        .heading {
+          color: #fff;
+          font-size: 20px;
+          margin-bottom: 60px;
+        }
+        .rows {
+          color: #fff;
+          font-size: 14px;
+          line-height: 20px;
+          .row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
