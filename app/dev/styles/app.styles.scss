@@ -1,9 +1,14 @@
 .app {
-  font-family: 'Open Sans', sans-serif;
-
+  font-family: 'Roboto', sans-serif;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  
+  //
+  // Defaults
+  * {
+    box-sizing: border-box;
+  }
   
   a {
     text-decoration: none;
@@ -18,11 +23,36 @@
     }
   }
 
+  //
+  // Helpers
+
   .section--inner {
     width: 1200px;
     margin-left: auto;
     margin-right: auto;
   }
+
+  .btn--read-more {
+    display: inline-block;
+    padding: 20px 30px;
+    background: #fff;
+    border-radius: 4px;
+    color: #103f61;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    &:hover {
+      box-shadow: 0px 0px 38px -8px rgba(0,0,0,0.75);
+    }
+    .ion-arrow-right-b {
+      margin-left: 10px;
+    }
+  }
+
+
+  //
+  // Variables
+  $images: '../../images/UI';
 
    //
   // Modules
@@ -34,7 +64,8 @@
 
    //
   // Pages
-  @import 'pages/home.scss';
+  @import 'pages/home/_.scss';
   @import 'pages/contact.scss';
+  @import 'pages/managed-services.scss';
 
 }

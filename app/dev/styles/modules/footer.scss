@@ -1,10 +1,8 @@
 .footer {
   padding: 60px 0;
-  
   .columns {
-    // background: #ccc;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     .column {
       width: 28%;
       // background: #eee;
@@ -42,6 +40,11 @@
   }
   .contacts {
     padding-top: 20px;
+    .contacts-heading {
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 20px;
+    }
     p {
       margin-top: 0;
       color: #9a9b9d;

@@ -42,7 +42,7 @@ var
   });
 
   gulp.task('watch', function() {
-    gulp.watch('index.html', ['html']);
+    gulp.watch('*.html', ['html']);
     gulp.watch('dev/styles/**/*', ['scss']);
   });
   gulp.task('default', gulpsync.sync([
