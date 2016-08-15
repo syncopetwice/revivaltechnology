@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
   <title>Home</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
@@ -11,23 +12,48 @@
   <link rel="stylesheet" href="/node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
   <link rel="stylesheet" href="assets/styles/app.styles.css" />
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="assets/js/vendor/fastclick.js"></script>
   <script src="/node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
-  <script>
-    $(document).ready(function(){
-      $('.owl-carousel').owlCarousel({
-        items: 1,
-        loop: true,
-        nav: true,
-        dots: true,
-        navText: ['<i class="ion-arrow-left-b"></i>', '<i class="ion-arrow-right-b"></i>']
-      });
-    });
-  </script>
-
+  <script src="assets/js/app.js"></script>
 </head>
 <body>
   <!-- Application -->
   <div class="app">
+      
+      <!-- Responsive Header Menu -->
+      <nav class="responsive-header-nav">
+        <div class="action--nav-off-wrapper">
+          <button type="button" class="action--nav-off"></button> 
+        </div>       
+        <ul class="list">
+          <li class="item"><a class="link" href="#">Home</a></li>
+          <li class="item"><a class="link" href="#">About</a></li>
+          <li class="item has-inner-list">
+            <a class="link" href="#">Services <i class="ion-chevron-right"></i></a>
+
+            <ul class="inner-list">
+              <li class="inner-item">
+                <a href="#" class="inner-link">Managed Services</a>
+              </li>
+              <li class="inner-item">
+                <a href="#" class="inner-link">IT Consulting</a>
+              </li>
+              <li class="inner-item">
+                <a href="#" class="inner-link">Managed Deployment</a>
+              </li>
+              <li class="inner-item">
+                <a href="#" class="inner-link">Telecom</a>
+              </li>
+              <li class="inner-item">
+                <a href="#" class="inner-link">Hosting & Cloud Services</a>
+              </li>
+            </ul>
+
+          </li>
+          <li class="item"><a class="link" href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- End :: Responsive Header Menu -->
 
       <!-- Header -->
       <header class="header">
@@ -37,15 +63,52 @@
           </div>
           <nav class="nav-menu">
             <ul class="nav-menu-list">
-              <li class="nav-menu-item"><a class="nav-menu-link" href="#">Home</a></li>
-              <li class="nav-menu-item"><a class="nav-menu-link" href="#">About</a></li>
-              <li class="nav-menu-item"><a class="nav-menu-link" href="#">Services</a></li>
-              <li class="nav-menu-item"><a class="nav-menu-link" href="./contact.html">Contact</a></li>
+              <li class="nav-menu-item">
+                <a class="nav-menu-link" href="#">Home</a>
+              </li>
+              <li class="nav-menu-item">
+                <a class="nav-menu-link" href="#">About</a>
+              </li>
+              <li class="nav-menu-item dropdown">
+                <a class="nav-menu-link" href="#">Services</a>
+                <!-- Dropdown Menu -->
+                <ul class="nav-dropdown-menu__list">
+                  <li class="nav-dropdown-menu__item">
+                    <a href="#" class="nav-dropdown-menu__link">Managed Services</a>
+                  </li>
+                  <li class="nav-dropdown-menu__item">
+                    <a href="#" class="nav-dropdown-menu__link">IT Consulting</a>
+                  </li>
+                  <li class="nav-dropdown-menu__item">
+                    <a href="#" class="nav-dropdown-menu__link">Managed Deployment</a>
+                  </li>
+                  <li class="nav-dropdown-menu__item">
+                    <a href="#" class="nav-dropdown-menu__link">Telecom</a>
+                  </li>
+                  <li class="nav-dropdown-menu__item">
+                    <a href="#" class="nav-dropdown-menu__link">Hosting & Cloud Services</a>
+                  </li>
+                </ul>
+                <!-- End :: Dropdown Menu -->
+              </li>
+              <li class="nav-menu-item">
+                <a class="nav-menu-link" href="./contact.html">Contact</a>
+              </li>
             </ul>
           </nav>
+      
+          <button type="button" class="action--nav-on">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
         </div>
       </header>
       <!-- End :: Header -->
+
+
+
       
       <main class="main">
         <!-- Page -->

@@ -1,5 +1,9 @@
 .section--slider {
-  max-height: 600px;
+  // max-height: 600px;
+
+  // @include mq($until: desktop) {
+  //   max-height: auto;
+  // }
   overflow: hidden;
   .owl-carousel {
     .owl-carousel-item {
@@ -9,6 +13,10 @@
       background-size: cover;
       display: flex;
       align-items: center;
+
+      @include mq($until: desktop) {
+        height: auto;
+      }
      
       &.second {
         background-image: url('#{$images}/slider/34645746568.jpg');
@@ -22,13 +30,31 @@
         margin-left: auto;
         margin-right: auto;
         color: #fff;
-        padding: 100px 0;
+        padding: 100px;
+
+        @include mq($until: desktop) {
+          padding: 70px 100px;
+        }
+        @include mq($until: tablet) {
+          padding: 50px 60px 50px 60px;
+        }
+        @include mq($until: landscape) {
+          padding: 30px 50px;
+        }
 
         h2 {
           margin-top: 0;
           margin-bottom: 30px;
           font-size: 32px;
           font-weight: 600;
+          @include mq($until: desktop) {
+            font-size: 24px;
+            margin-bottom: 15px;
+          }
+          @include mq($until: tablet) {
+            font-size: 18px;
+            margin-bottom: 10px;
+          }
         }
         p {
           margin-top: 0;
@@ -36,6 +62,19 @@
           margin-bottom: 30px;
           font-weight: 300;
           line-height: 30px;
+          @include mq($until: desktop) {
+            font-size: 14px;
+            margin-bottom: 15px;
+            line-height: 24px;
+          }
+          
+          @include mq($until: tablet) {
+            
+            // Hide all paragraphs except the first one  
+            &:not(:first-of-type) {
+              display: none;
+            }
+          }
         }
       }
     }
@@ -50,28 +89,55 @@
         top: 45%;
         transition: box-shadow 0.2s ease;
         padding: 20px;
-        background: #fff;
+        background: rgba(255,255,255,0.5);
         border-radius: 4px;
         color: #333;
         font-size: 16px;
+        transition: background 0.25s ease-in-out;
+        @include mq($until: desktop) {
+          top: 35%;
+        }
+        @include mq($until: tablet) {
+          padding: 10px 15px; 
+        }
+        @include mq($until: landscape) {
+          padding: 10px;
+        }
         &:hover {
           box-shadow: 0px 0px 38px -8px rgba(0,0,0,0.75);
+          background: rgba(255,255,255,1);
         }
       }
       .owl-prev {
         left: 20px;
+        @include mq($until: tablet) {
+          left: 5px;
+        }
+        // @include mq($until: landscape) {
+        //   left: 2px;
+        // }
       }
       .owl-next {
         right: 20px;
+        @include mq($until: tablet) {
+          right: 5px;
+        }
+        // @include mq($until: landscape) {
+        //   right: 2px;
+        // }
       }
     }
 
     .owl-dots {
       position: absolute;
-      bottom: 15px;
+      bottom: 20px;
       left: 0;
       right: 0;
       text-align: center;
+
+      @include mq($until: landscape) {
+        display: none;
+      }
       
       .owl-dot span {
         background: none;

@@ -1,12 +1,27 @@
+@import "../../bower_components/sass-mq/_mq.scss";
+@import "../../bower_components/normalize-scss/sass/_support-for.scss";
+@import "../../bower_components/normalize-scss/fork-versions/ruby-sass-compass/_normalize.scss";
+
+html {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body {
+  position: relative;
+}
+
 .app {
   font-family: 'Roboto', sans-serif;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  position: relative;
   
   //
   // Defaults
-  * {
+  *,
+  *::before,
+  *::after
+   {
     box-sizing: border-box;
   }
   
@@ -25,11 +40,13 @@
 
   //
   // Helpers
-
   .section--inner {
     width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    @include mq($until: wide) {
+      width: 100%;
+    }
   }
 
   .btn--read-more {
@@ -47,16 +64,25 @@
     .ion-arrow-right-b {
       margin-left: 10px;
     }
+    
+    @include mq($until: desktop) {
+      padding: 10px 15px;
+      font-size: 12px;
+    }
+    @include mq($until: tablet) {
+      padding: 5px 10px;
+    }
+
   }
 
-
-  //
+   //
   // Variables
   $images: '../../images/UI';
 
    //
   // Modules
   @import 'modules/header.scss';
+  
   .main {
     flex: 1;
   }
@@ -69,3 +95,7 @@
   @import 'pages/managed-services.scss';
 
 }
+
+ //
+// Responsive Header Nav
+@import "modules/responsive-header-nav.scss";

@@ -2,48 +2,105 @@
   
   .section--jumbotron {
     background-color: #58ade6;
-    background-repeat: no-repeat;
-    background-position: 80% center;
-    padding-top: 100px;
-    padding-bottom: 140px;
+    padding: 70px 50px 140px 50px;
+
+    @include mq($until: wide) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    @include mq($until: tablet) {
+      padding-bottom: 100px;
+    }
+
+    @include mq($until: landscape) {
+      padding: 30px 20px;
+    }
 
     .banner {
-      width: 900px;
+      max-width: 1200px;
     }
     .heading {
-      font-size: 50px;
+      font-size: 40px;
       font-weight: 700;
       color: #fff;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
       margin-top: 0;
+      @include mq($until: wide) {
+        font-size: 34px;
+        margin-bottom: 20px;
+      }
+      @include mq($until: tablet) {
+        font-size: 28px;
+        margin-bottom: 10px;
+      }
     }
     .description {
       margin-top: 0;
-      font-size: 14px;
+      font-size: 16px;
       color: #fff;
       margin-bottom: 18px;
       line-height: 25px;
+      @include mq($until: tablet) {
+        font-size: 14px;
+      }
     }
   }
 
   .section--contact-us {
     position: relative;
-    border-bottom: 1px solid #f5f5f5;
+    margin-left: 30px;
+    margin-right: 30px;
+    @include mq($until: landscape) {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
     .container--contact-us {
       box-shadow: 0px 0px 38px -8px rgba(0,0,0,0.75);
       display: flex;
       position: relative;
-      top: -100px;
+      top: -80px;
       margin-left: auto;
       margin-right: auto;
+      @include mq($until: desktop) {
+        display: block;
+      }
+      @include mq($until: tablet) {
+        top: -50px;
+      }
+      @include mq($until: landscape) {
+        box-shadow: none;
+        position: static;
+      }
       .send-a-message {
         width: percentage(750/1140);
         background: #fff;
         padding: 60px 40px 70px 65px;
+        @include mq($until: xwide) {
+          padding: 30px 30px 70px 30px;
+        }
+        @include mq($until: wide) {
+          width: 100%;
+        }
+        @include mq($until: tablet) {
+          padding-bottom: 30px;
+        }
+        @include mq($until: landscape) {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
         .heading {
           color: #203351;
           font-size: 20px;
           margin-bottom: 60px;
+          @include mq($until: tablet) {
+            font-size: 18px;
+            margin-bottom: 30px;
+          }
+          @include mq($until: landscape) {
+            font-size: 16px;
+            margin-bottom: 20px;
+          }
         }
 
         .form {
@@ -67,26 +124,38 @@
           .textarea {
             font-weight: 600;
             padding: 10px 0 15px 0;
+            @include mq($until: tablet) {
+              padding-top: 5px;
+              padding-bottom: 5px;
+            }
           }
 
           .label {
             color: #b8b9bb;
             margin-bottom: 5px;
-            font-size: 13px;
+            font-size: 16px;
+            @include mq($until: tablet) {
+              margin-bottom: 0;
+            }
+            @include mq($until: landscape) {
+              font-size: 12px;
+            }
           }
 
           .input {
             border: 0;
-            border-bottom: 1px solid #f0f0f0;
+            border-bottom: 1px solid darken(#E0E0E0, 5%);
             color: #383f45;
             font-size: 16px;
+            border-radius: 0;
           }
 
           .textarea {
             border: 0;
-            border-bottom: 1px solid #f0f0f0;
-            min-height: 6 0px;
+            border-bottom: 1px solid darken(#E0E0E0, 5%);
+            min-height: 80px;
             resize: none;
+            border-radius: 0;
           }
 
           .submit {
@@ -100,6 +169,12 @@
             border-radius: 100px;
             box-shadow: 0px 0px 30px -7px rgba(66,167,239,1);
             cursor: pointer;
+            @include mq($until: tablet) {
+              position: static;
+              margin-left: auto;
+              margin-right: auto;
+              display: block;
+            }
             .icon-submit {
               color: #fff;
               font-size: 30px;
@@ -114,11 +189,26 @@
             &:last-child {
               margin-bottom: 0;
             }
+            @include mq($until: tablet) {
+              display: block;
+            }
             .form-field {
               width: 48%;
+              flex: 1 1 auto;
+              margin-right: 20px;
+              @include mq($until: desktop) {
+                width: 100%;
+                margin-bottom: 30px;
+                &:last-child {
+                  margin-bottom: 0;
+                }
+              }
               &.form-field--textarea {
                 width: 100%;
                 padding-right: 70px;
+                @include mq($until: tablet) {
+                  padding-right: 0;
+                }
               }
 
             }
@@ -130,26 +220,60 @@
         width: percentage(390/1140);
         background: #103f6d;
         padding: 60px 40px 70px 65px;
+        @include mq($until: xwide) {
+          padding: 30px 30px 70px 30px;
+        }
+        @include mq($until: wide) {
+          width: 100%;
+        }
+        @include mq($until: landscape) {
+          padding: 30px 20px;
+        }
         .heading {
           color: #fff;
           font-size: 20px;
           margin-bottom: 60px;
+          @include mq($until: tablet) {
+            font-size: 18px;
+            margin-bottom: 30px;
+          }
+          @include mq($until: landscape) {
+            font-size: 16px;
+            margin-bottom: 20px;
+            text-align: center;
+          }
         }
         .rows {
           color: #fff;
-          font-size: 14px;
-          line-height: 20px;
+          font-size: 16px;
+          @include mq($until: landscape) {
+            font-size: 12px;
+          }
           .row {
             margin-bottom: 30px;
+            @include mq($until: landscape) {
+              margin-bottom: 20px;
+            }
             span {
               display: flex;
               align-items: center;
+              @include mq($until: landscape) {
+                display: block;
+                text-align: center;
+              }
             }
             i {
               font-size: 32px;
               min-width: 30px;
               margin-right: 20px;
               text-align: center;
+              @include mq($until: landscape) {
+                // margin-right: 10px;
+                margin-right: 0;
+                margin-bottom: 15px;
+                font-size: 28px;
+                display: block;
+              }
             }
             &:last-child {
               margin-bottom: 0;

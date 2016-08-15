@@ -1,11 +1,14 @@
 .header {
   background: #fff;
+  @include mq($until: wide) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   .container--header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 20px;
-    padding-bottom: 10px;
+    padding: 10px 0;
   }
   .logotype {
     width: 250px;
@@ -21,17 +24,96 @@
     padding: 0;
     display: flex;
     justify-content: space-between;
+    
+    @include mq($until: tablet) {
+      background: #000;
+      display: none;
+    }
+
   }
   .nav-menu-item {
     margin-right: 60px;
+
     &:last-child {
       margin-right: 0;
     }
+    &.dropdown {
+      position: relative;
+     
+      .nav-menu-link {
+        position: relative;
+        cursor: pointer;
+        &:after {
+          content: "";
+          position: absolute;
+          top: 110%;
+          left: 50%;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 5px 4px 0 4px;
+          border-color: #333 transparent transparent transparent;
+        }
+      }
+
+    }
+    //
+    // Dropdown Menu
+    .nav-dropdown-menu__list {
+      display: none;
+      position: absolute;
+      top: 130%;
+      left: calc(-50% - 25px);
+      width: 170px;
+      background: #fff;
+      z-index: 99;
+      margin: 0;
+      padding: 10px 0;
+      border-radius: 4px;
+      box-shadow: 0px 0px 38px -8px rgba(0,0,0,0.75);
+      
+      //
+      // State
+      &.is-active {
+        display: block;
+      }
+
+    }
+    .nav-dropdown-menu__item {}
+    .nav-dropdown-menu__link {
+      font-size: 14px;
+      color: #000;
+      padding: 10px 15px;
+    }
+
   }
   .nav-menu-link {
     font-weight: 600;
     text-transform: uppercase;
     color: #333;
     font-size: 12px;
+  }
+  
+  //
+  // > Tablet Responsive
+
+  .action--nav-on {
+    display: none;
+    background:none;
+    border: none;
+    cursor: pointer;
+    span {
+      width: 20px;
+      height: 1px;
+      display: block;
+      background-color: #333;
+      margin-bottom: 6px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    @include mq($until: tablet) {
+      display: block;
+    }
   }
 }
